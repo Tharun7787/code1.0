@@ -56,6 +56,7 @@ function UniProvider({ children }) {
       try {
         const res = await fetch(`${BASE_URL}/login`);
         const data = await res.json();
+        console.log(data)
         dispatch({ type: "info/loaded", payload: data });
       } catch {
         dispatch({
